@@ -11,9 +11,9 @@
 # have been told to make (X, Y or Z which again is rock,
 # paper, scissors respectively).
 #
-# in this game you get 1, 2 and 3 points for rock, paper
-# and scissors respectively, plus 3 and 6 points for a draw
-# and win respectively.
+# in this game you get 1, 2 and 3 points for playing rock,
+# paper and scissors respectively, plus 3 and 6 points 
+# for a draw and win respectively.
 
 # puzzle output: your total score using puzzle input
 
