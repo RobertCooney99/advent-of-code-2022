@@ -21,10 +21,10 @@ from utils import aochelper
 
 input = aochelper.txtToString("2")
 
-def replaceFromDict(list, dict):
+def replaceFromDict(item, dict):
     for k, v in dict.items():
-        list = list.replace(k, v)
-    return list
+        item = item.replace(k, v)
+    return item
 
 numberMapping = {"A": "1", "B": "2", "C": "3", "X": "1", "Y": "2", "Z": "3", " ": ""}
 
