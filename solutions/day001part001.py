@@ -2,7 +2,7 @@
 # 
 # puzzle input: input is a text file of elves' inventories
 # containing the number of calories of food items, each
-# elves inventory (if any) by a blank line.
+# elves inventory (if any) separated by a blank line.
 #
 # puzzle output: the number of calories of the elf
 # with the highest number of calories.
