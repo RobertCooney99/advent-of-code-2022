@@ -1,5 +1,4 @@
 # advent-of-code-2022
-My solutions to https://adventofcode.com/ 2022 edition.
 
 Advent of Code is an annual advent calendar of small programming puzzles, made by Eric Wastl.
 
