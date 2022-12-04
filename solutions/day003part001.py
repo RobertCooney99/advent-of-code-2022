@@ -6,25 +6,25 @@
 
 from utils import aochelper
 
-input = aochelper.txtToString("3")
+input = aochelper.text_to_string("3")
 
-def deduplicateChars(string):
+def deduplicate_chars(string):
     return "".join(set(string))
 
-def splitStringAndDeduplicteChars(string):
-    return [deduplicateChars(string[:int(len(string)/2)]), deduplicateChars(string[int(len(string)/2):])]
+def split_string_and_deduplicate_chars(string):
+    return [deduplicate_chars(string[:int(len(string)/2)]), deduplicate_chars(string[int(len(string)/2):])]
 
-rucksacks = list(map(lambda rucksack: splitStringAndDeduplicteChars(rucksack), input.split("\n")))
+rucksacks = list(map(lambda rucksack: split_string_and_deduplicate_chars(rucksack), input.split("\n")))
 
-allCommonItems = []
+all_common_items = []
 for rucksack in rucksacks:
-    commonItems = []
+    common_items = []
     for item in rucksack[0]:
-        if item not in commonItems and item in rucksack[1]:
-            commonItems += item
-    allCommonItems += commonItems
+        if item not in common_items and item in rucksack[1]:
+            common_items += item
+    all_common_items += common_items
 
 alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-priorityTotal = sum(list(map(lambda letter: alphabet.index(letter) + 1, allCommonItems)))
+priority_total = sum(list(map(lambda letter: alphabet.index(letter) + 1, all_common_items)))
 
-print(f"Priority total: {priorityTotal}")
+print(f"Priority total: {priority_total}")

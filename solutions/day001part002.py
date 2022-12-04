@@ -9,7 +9,7 @@
 
 from utils import aochelper
 
-input = aochelper.txtToString("1")
+input = aochelper.text_to_string("1")
 
 elves = list(map(lambda basket: sum(map(int, basket.split("\n"))), input.split("\n\n")))
 print(f"Calorie total for top 3 elves combined:{sum(sorted(elves, reverse=True)[:3])}")

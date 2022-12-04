@@ -6,9 +6,9 @@
 
 from utils import aochelper
 
-input = aochelper.txtToString("3")
+input = aochelper.text_to_string("3")
 
-rucksacks = list(map(lambda rucksack: "".join(set(rucksack)),input.split("\n")))
+rucksacks = list(map(lambda rucksack: "".join(set(rucksack)), input.split("\n")))
 grouped_rucksacks = [rucksacks[x:x+3] for x in range(0, len(rucksacks), 3)]
 
 badges = []
@@ -18,7 +18,7 @@ for rucksack_group in grouped_rucksacks:
             badges += item
 
 alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-priorityTotal = sum(list(map(lambda letter: alphabet.index(letter) + 1, badges)))
+priority_total = sum(list(map(lambda letter: alphabet.index(letter) + 1, badges)))
 
-print(f"Priority total: {priorityTotal}")
+print(f"Priority total: {priority_total}")
     

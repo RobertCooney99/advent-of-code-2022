@@ -19,21 +19,21 @@
 
 from utils import aochelper
 
-input = aochelper.txtToString("2")
+input = aochelper.text_to_string("2")
 
-def replaceFromDict(item, dict):
+def replace_from_dict(item, dict):
     for k, v in dict.items():
         item = item.replace(k, v)
     return item
 
-characterMapping = {"A": "1", "B": "2", "C": "3", "X": "loss", "Y": "draw", "Z": "win"}
+character_mapping = {"A": "1", "B": "2", "C": "3", "X": "loss", "Y": "draw", "Z": "win"}
 
-rounds = list(map(lambda round: replaceFromDict(round.strip(), characterMapping).split(" "), input.split("\n")))
-pointCalculators = {"loss": lambda x: (((x - 1 ) + 2) % 3) + 1, "draw": lambda x: 3 + x, "win": lambda x: 6 + (((x - 1) - 2) % 3) + 1}
+rounds = list(map(lambda round: replace_from_dict(round.strip(), character_mapping).split(" "), input.split("\n")))
+point_calculators = {"loss": lambda x: (((x - 1 ) + 2) % 3) + 1, "draw": lambda x: 3 + x, "win": lambda x: 6 + (((x - 1) - 2) % 3) + 1}
 
-def calculatePoints(round):
-    elfMove, outcome = round
-    return pointCalculators[outcome](int(elfMove))
+def calculate_points(round):
+    elf_move, outcome = round
+    return point_calculators[outcome](int(elf_move))
 
-total = sum(list(map(lambda round: calculatePoints(round), rounds)))
+total = sum(list(map(lambda round: calculate_points(round), rounds)))
 print(f"Points total: {total}")

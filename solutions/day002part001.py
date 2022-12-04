@@ -19,26 +19,26 @@
 
 from utils import aochelper
 
-input = aochelper.txtToString("2")
+input = aochelper.text_to_string("2")
 
-def replaceFromDict(item, dict):
+def replace_using_dict(item, dict):
     for k, v in dict.items():
         item = item.replace(k, v)
     return item
 
-numberMapping = {"A": "1", "B": "2", "C": "3", "X": "1", "Y": "2", "Z": "3", " ": ""}
+character_mapping = {"A": "1", "B": "2", "C": "3", "X": "1", "Y": "2", "Z": "3", " ": ""}
 
-rounds = map(lambda round: list(map(int, replaceFromDict(round.strip(), numberMapping))), input.split("\n"))
+rounds = map(lambda round: list(map(int, replace_using_dict(round.strip(), character_mapping))), input.split("\n"))
 
-def calcRoundPoints(round):
-    elfsTurn, myTurn = round
-    result = (myTurn - elfsTurn) * (myTurn ** 2)
+def calc_round_points(round):
+    elf_move, my_move = round
+    result = (my_move - elf_move) * (my_move ** 2)
     if result in [9, 4, -2]:
-        return (6 + myTurn)
+        return (6 + my_move)
     elif result == 0:
-        return (3 + myTurn)
+        return (3 + my_move)
     else:
-        return myTurn
+        return my_move
 
-total = sum(list(map(lambda round: calcRoundPoints(round), rounds)))
+total = sum(list(map(lambda round: calc_round_points(round), rounds)))
 print(f"Points total: {total}")

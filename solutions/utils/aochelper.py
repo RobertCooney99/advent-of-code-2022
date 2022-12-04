@@ -1,8 +1,8 @@
 from pathlib import Path
 
-def txtToString(day):
-    return Path(getInputPath(day, ".txt")).read_text()
+def text_to_string(day):
+    return Path(get_input_path(day, ".txt")).read_text()
 
-def getInputPath(day, ext):
+def get_input_path(day, ext):
     return (f"inputs/day{str(day).zfill(3)}{ext}")
 
