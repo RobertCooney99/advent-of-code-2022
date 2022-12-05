@@ -1,4 +1,4 @@
-![Advent of Code repo banner](https://github.com/RobertCooney99/advent-of-code-2022/blob/main/aoc22-banner-thin-upscaled.png?raw=true)
+![Advent of Code repo banner](https://raw.githubusercontent.com/RobertCooney99/advent-of-code-2022/main/img/aoc22-banner-png.png)
 
 **Advent of Code** is an annual advent calendar of small programming puzzles, made by Eric Wastl.
 
