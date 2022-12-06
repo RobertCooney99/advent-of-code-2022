@@ -18,5 +18,5 @@ for index in range(0, len(input) - 3):
         characters_processed = index + 4
         break
 
-print(f"Found 4 different characters after {characters_processed} characters")
+print(f"Found 4 distinct characters after {characters_processed} characters")
 
