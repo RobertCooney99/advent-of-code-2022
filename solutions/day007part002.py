@@ -103,7 +103,7 @@ for directory in directories_from_input:
     file_manager.add_directory(Dir(directory[0], children_directories, files))
 
 for directory in file_manager.directories.values():
-    dir_size = file_manager.get_directory_total_deep_size(directory.name)
+    file_manager.get_directory_total_deep_size(directory.name)
 
 total_space_available = 70000000
 unused_space_required = 30000000
